@@ -42,7 +42,7 @@ VITE_SUPABASE_PUBLISHABLE_KEY="${SUPABASE_ANON_KEY}"
 # 2. Variables para backend o servidor Node / Next.js
 SUPABASE_URL="${SUPABASE_URL}"
 SUPABASE_PUBLISHABLE_KEY="${SUPABASE_ANON_KEY}"
-SUPABASE_SECRET_KEY="${SUPABASE_SECRET_KEY}"
+SUPABASE_SECRET_KEY="\${SUPABASE_SECRET_KEY}"
 SUPABASE_JWKS_URL="${SUPABASE_URL}/auth/v1/.well-known/jwks.json"
 
 # Credenciales de Administrador por defecto
