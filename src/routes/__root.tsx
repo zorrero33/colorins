@@ -1,5 +1,6 @@
 import {
   createRootRouteWithContext,
+  HeadContent,
   Outlet,
   Scripts,
 } from "@tanstack/react-router";
@@ -18,7 +19,10 @@ export const Route =
     queryClient: QueryClient;
   }>()({
     component: () => (
-      <QueryClientProvider client={queryClient}>
+      <>
+        <HeadContent />
+
+        <QueryClientProvider client={queryClient}>
         <ShopProvider>
           <div className="flex min-h-dvh flex-col font-sans">
             <Header />
@@ -33,5 +37,6 @@ export const Route =
           <Scripts />
         </ShopProvider>
       </QueryClientProvider>
+      </>
     ),
   });
