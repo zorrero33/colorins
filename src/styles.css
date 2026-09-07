@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --font-sans: "Figtree", sans-serif;
+  --color-coral: #ff705a;
+  --color-sun: #ffb84d;
+  --color-turquoise: #4fd1c5;
+}
+
+@layer base {
+  body {
+    @apply bg-[oklch(0.995_0.005_95)] text-[oklch(0.24_0.05_264)] font-sans antialiased;
+    margin: 0;
+  }
+}
+
+@utility text-gradient-brand {
+  background: linear-gradient(120deg, #ff705a, #ffb84d, #4fd1c5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility surface-card {
+  background: white;
+  border-radius: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+@utility blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(80px);
+  opacity: 0.3;
+  z-index: -1;
+}
